@@ -311,7 +311,7 @@
     packageDefinitions = {
       # These are the names of your packages
       # you can include as many as you wish.
-      nvim = {
+      v = {
         pkgs,
         name,
         ...
@@ -324,7 +324,7 @@
           wrapRc = true;
           # IMPORTANT:
           # your alias may not conflict with your other packages.
-          aliases = ["nvc"];
+          aliases = ["nvc" "v"];
           # neovim-unwrapped = inputs.neovim-nightly-overlay.packages.${pkgs.system}.neovim;
         };
         # and a set of categories that you want
@@ -355,7 +355,7 @@
     };
     # In this section, the main thing you will need to do is change the default package name
     # to the name of the packageDefinitions entry you wish to use as the default.
-    defaultPackageName = "nvim";
+    defaultPackageName = "v";
   in
     # see :help nixCats.flake.outputs.exports
     forEachSystem (system: let
